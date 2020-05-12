@@ -1,0 +1,18 @@
+{
+    "type": "addon",
+    "key": "masonry",
+    "name": "Masonry",
+    "description": "Transform Discussions lists into masonry styled views.",
+    "license": "MIT",
+    "version": "0.0.1",
+    "settingsUrl": "/settings/masonry",
+    "pluginUrl": "https://github.com/r-j/masonry",
+    "authors": [
+        {
+            "name": "Robin Jurinka",
+            "homepage": "https://open.vanillaforums.com/profile/r_j"
+        }
+    ],
+    "className": "MasonryPlugin",
+    "mobileFriendly": false
+}
