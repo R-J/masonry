@@ -1,4 +1,4 @@
-.DataList.Discussions .Item {
+.DataList.Discussions .Item, .DataList.Discussions .Item:first-child {
     border: 1px solid #d6d7d9;
     border-radius: 20px;
     padding: 1em;
