@@ -68,9 +68,17 @@ class MasonryPlugin extends Gdn_Plugin {
      * @return string The formatted body text.
      */
     protected function getDiscussionContent($discussion) {
-        $result = '<div class="Message userContent">';
+        $commentsLink = '';
+        if ($discussion->FirstCommentID) {
+            $commentsLink = '<div>'.
+                anchor('Comments', commentUrl($discussion->FirstCommentID), 'Button masonryCommentsLink').
+                '</div>';
+        }
+
+        $result = '<div class="Message userContent masonry" id="masonry_'.$discussion->DiscussionID.'">';
         $result .= Gdn_Format::to($discussion->Body, $discussion->Format);
         $result .= '</div>';
+        $result .= wrapIf($commentsLink, 'div', ' class="Buttons masonryButtons"');
 
         return $result;
     }
