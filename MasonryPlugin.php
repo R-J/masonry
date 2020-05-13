@@ -70,8 +70,10 @@ class MasonryPlugin extends Gdn_Plugin {
     protected function getDiscussionContent($discussion) {
         $commentsLink = '';
         if ($discussion->FirstCommentID) {
+            $commentID = $discussion->FirstCommentID;
+            $link = "/discussion/comment/{$commentID}#Comment_{$commentID}";
             $commentsLink = '<div>'.
-                anchor('Comments', commentUrl($discussion->FirstCommentID), 'Button masonryCommentsLink').
+                anchor('Comments', $link, 'Button masonryCommentsLink').
                 '</div>';
         }
 
